@@ -8,7 +8,7 @@ int main()
 {
 
      //prepare window
-     InitWindow(800, 600, "MyWindow");
+     InitWindow(800, 600, "Space Invaders");
      SetTargetFPS(60);
      //main loop
      while (!WindowShouldClose())
