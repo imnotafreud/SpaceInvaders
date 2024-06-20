@@ -1,5 +1,7 @@
 #pragma once
 #include "raylib.h"
+#include "laser.h"
+#include <vector>
 
 class SpaceShip
 {
@@ -10,10 +12,13 @@ class SpaceShip
         void MoveLeft();
         void MoveRight();
         void FireLaser();
+        std::vector<Laser> lasers;
 
         ~SpaceShip();
     private:
     Texture2D image;
     Vector2 position;
+    int speed{7};
+    double lastFireTime;
     
 };

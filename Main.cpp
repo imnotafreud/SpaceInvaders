@@ -1,6 +1,6 @@
 #include "raylib.h"
-#include "spaceship.h"
-
+#include "game.h"
+#include "laser.h"
 
 
 
@@ -15,19 +15,22 @@ int main()
      //prepare window
      InitWindow(windowWidth, windowHeight, "Space Invaders");
      SetTargetFPS(60);
-     SpaceShip ship = SpaceShip();     
-     
+     Game game;
+
      
      //main loop
      while (!WindowShouldClose())
      {
-          
-          float dt = GetFrameTime();
           DrawFPS(0, 0);
+          game.HandleInput();
+          game.Update();
+          
+
           BeginDrawing();
-          ClearBackground(grey);
           //draw background
-          ship.Draw();
+          ClearBackground(grey);
+
+          game.Draw();
 
 
       EndDrawing();
