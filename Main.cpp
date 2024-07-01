@@ -6,6 +6,7 @@
 
 
 
+
 int main()
 {
 
@@ -25,7 +26,7 @@ int main()
           DrawFPS(0, 0);
           game.HandleInput();
           game.Update();
-          
+
 
           BeginDrawing();
           //draw background
