@@ -43,6 +43,11 @@ void SpaceShip::FireLaser()
 
 }
 
+Rectangle SpaceShip::getRect()
+{
+    return {position.x, position.y, float(image.width), float(image.height)};
+}
+
 SpaceShip::~SpaceShip()
 {
     std::cout << "unload spaceship" << std::endl;

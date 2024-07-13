@@ -12,6 +12,7 @@ public:
     void Draw();
     void Update();
     void HandleInput();
+    void CheckForCollisions();
 
 private:
     SpaceShip spaceship;
