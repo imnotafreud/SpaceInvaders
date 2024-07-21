@@ -13,7 +13,9 @@ public:
     void Update();
     void HandleInput();
     void CheckForCollisions();
-
+    bool run;
+    void PauseGame();
+    bool pause;
 private:
     SpaceShip spaceship;
     std::vector<Obstacle> CreateObstacles();
@@ -22,13 +24,18 @@ private:
     void MoveDownAleins(int distance);
     void DeleteInactiveLasers();
     void AlienShootLaser();
+    void GameOver();
+    void Reset();
+    void InitGame();
     std::vector<Obstacle> obstacles;
     std::vector<Alien> aliens;
     int aliensDirection;
     std::vector<Laser> alienLasers;
-    constexpr static float alienLaserShootInterval = 0.35;
+    constexpr static float alienLaserShootInterval = 0.15;
     float timeLastAlienFired;
     MysteryShip mysteryship;
     float mysteryShipSpawnInterval;
     float timeLastSpawn;
+    int lives;
+
 };
